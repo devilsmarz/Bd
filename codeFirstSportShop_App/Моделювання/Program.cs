@@ -18,7 +18,7 @@ namespace Моделювання
             {
                 // Стратегія роботи з базою даних
                 Database.SetInitializer(
-                new DropCreateDatabaseAlways<SportShopContext>());
+                new DropCreateDatabaseAlways<ClothShopContext>());
                 // Описуємо фактичні параметри методу FillDB
                 int nProduct;
                 int nManufacturer;
@@ -30,18 +30,18 @@ namespace Моделювання
                 Console.WriteLine(
                 "Базу даних на SQL Server створено і заповнено.\n"
                 + "У таблиці записано таку кількість рядків:\n"
-                + "SportItems - " + nProduct
-                + ", SportShops - " + nManufacturer
-                + ", ItemDocs - " + nSale
+                + "ClothItems - " + nProduct
+                + ", ClothShops - " + nManufacturer
+                + ", ClothDocs - " + nSale
                 + ".\n Перевірте!!!");
 
 
                 // Реєстрування ініціалізатора бази даних
                 Database.SetInitializer(new
-                 MigrateDatabaseToLatestVersion<SportShopContext, Configuration>());
-                using (var context = new SportShopContext())
+                 MigrateDatabaseToLatestVersion<ClothShopContext, Configuration>());
+                using (var context = new ClothShopContext())
                 {
-                    foreach (var p in context.SportItems)
+                    foreach (var p in context.ClothItems)
                     {
                         Console.WriteLine(p.Name);
                     }

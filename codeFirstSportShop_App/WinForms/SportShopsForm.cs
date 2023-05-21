@@ -12,25 +12,25 @@ using Моделювання.DataAccess;
 
 namespace WinForms
 {
-    public partial class SportShopsForm : Form
+    public partial class ClothShopsForm : Form
     {
-        public SportShopContext context;
+        public ClothShopContext context;
 
-        public SportShopsForm()
+        public ClothShopsForm()
         {
             InitializeComponent();
         }
 
-        private void SportShopsForm_Load(object sender, EventArgs e)
+        private void ClothShopsForm_Load(object sender, EventArgs e)
         {
             // Створюємо екземпляр класу DbContext
-            context = new SportShopContext();
+            context = new ClothShopContext();
             // Додаємо колекцію сутностей до контексту
-            context.SportShops.Load();
+            context.ClothShops.Load();
             // Прив'язуємо набір сутностей до елемента DataGridView
-            dataGridView1.DataSource = context.SportShops.Local.ToBindingList();
+            dataGridView1.DataSource = context.ClothShops.Local.ToBindingList();
             //Вилучаємо властивості навігації з інтерфейсу
-            dataGridView1.Columns.Remove("ItemDocs");
+            dataGridView1.Columns.Remove("ClothDocs");
         }
 
         private void SabeChangesButton_Click(object sender, EventArgs e)

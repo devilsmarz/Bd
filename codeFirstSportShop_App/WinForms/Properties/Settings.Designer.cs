@@ -28,9 +28,9 @@ namespace WinForms.Properties {
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
         [global::System.Configuration.DefaultSettingValueAttribute("Data Source=(localDB)\\MSSQLLocalDB;Initial Catalog=Моделювання.DataAccess.SportSh" +
             "opContex;Integrated Security=True")]
-        public string Моделювання_DataAccess_SportShopContexConnectionString {
+        public string Моделювання_DataAccess_ClothShopContexConnectionString {
             get {
-                return ((string)(this["Моделювання_DataAccess_SportShopContexConnectionString"]));
+                return ((string)(this["Моделювання_DataAccess_ClothShopContexConnectionString"]));
             }
         }
     }

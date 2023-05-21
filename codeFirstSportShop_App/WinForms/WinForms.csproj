@@ -72,17 +72,17 @@
     <Compile Include="SalesForm.Designer.cs">
       <DependentUpon>SalesForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="SportItemsForm.cs">
+    <Compile Include="ClothItemsForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="SportItemsForm.Designer.cs">
-      <DependentUpon>SportItemsForm.cs</DependentUpon>
+    <Compile Include="ClothItemsForm.Designer.cs">
+      <DependentUpon>ClothItemsForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="SportShopSalesForm.cs">
+    <Compile Include="ClothShopSalesForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="SportShopSalesForm.Designer.cs">
-      <DependentUpon>SportShopSalesForm.cs</DependentUpon>
+    <Compile Include="ClothShopSalesForm.Designer.cs">
+      <DependentUpon>ClothShopSalesForm.cs</DependentUpon>
     </Compile>
     <Compile Include="SportShopsForm.cs">
       <SubType>Form</SubType>
@@ -90,16 +90,16 @@
     <Compile Include="SportShopsForm.Designer.cs">
       <DependentUpon>SportShopsForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="WaybillsForm.cs">
+    <Compile Include="InvoicesForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="WaybillsForm.Designer.cs">
-      <DependentUpon>WaybillsForm.cs</DependentUpon>
+    <Compile Include="InvoicesForm.Designer.cs">
+      <DependentUpon>InvoicesForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="_Моделювання_DataAccess_SportShopContexDataSet.Designer.cs">
+    <Compile Include="_Моделювання_DataAccess_ClothShopContexDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>_Моделювання_DataAccess_SportShopContexDataSet.xsd</DependentUpon>
+      <DependentUpon>_Моделювання_DataAccess_ClothShopContexDataSet.xsd</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Main.resx">
       <DependentUpon>Main.cs</DependentUpon>
@@ -116,17 +116,17 @@
     <EmbeddedResource Include="SalesForm.resx">
       <DependentUpon>SalesForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="SportItemsForm.resx">
-      <DependentUpon>SportItemsForm.cs</DependentUpon>
+    <EmbeddedResource Include="ClothItemsForm.resx">
+      <DependentUpon>ClothItemsForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="SportShopSalesForm.resx">
-      <DependentUpon>SportShopSalesForm.cs</DependentUpon>
+    <EmbeddedResource Include="ClothShopSalesForm.resx">
+      <DependentUpon>ClothShopSalesForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SportShopsForm.resx">
       <DependentUpon>SportShopsForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="WaybillsForm.resx">
-      <DependentUpon>WaybillsForm.cs</DependentUpon>
+    <EmbeddedResource Include="InvoicesForm.resx">
+      <DependentUpon>InvoicesForm.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\DataSources\Моделювання.Model.ItemDoc.datasource" />
@@ -143,16 +143,16 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <None Include="_Моделювання_DataAccess_SportShopContexDataSet.xsc">
-      <DependentUpon>_Моделювання_DataAccess_SportShopContexDataSet.xsd</DependentUpon>
+    <None Include="_Моделювання_DataAccess_ClothShopContexDataSet.xsc">
+      <DependentUpon>_Моделювання_DataAccess_ClothShopContexDataSet.xsd</DependentUpon>
     </None>
-    <None Include="_Моделювання_DataAccess_SportShopContexDataSet.xsd">
+    <None Include="_Моделювання_DataAccess_ClothShopContexDataSet.xsd">
       <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>_Моделювання_DataAccess_SportShopContexDataSet.Designer.cs</LastGenOutput>
+      <LastGenOutput>_Моделювання_DataAccess_ClothShopContexDataSet.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
-    <None Include="_Моделювання_DataAccess_SportShopContexDataSet.xss">
-      <DependentUpon>_Моделювання_DataAccess_SportShopContexDataSet.xsd</DependentUpon>
+    <None Include="_Моделювання_DataAccess_ClothShopContexDataSet.xss">
+      <DependentUpon>_Моделювання_DataAccess_ClothShopContexDataSet.xsd</DependentUpon>
     </None>
   </ItemGroup>
   <ItemGroup>

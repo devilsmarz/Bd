@@ -11,61 +11,66 @@ namespace Моделювання.Fill
 {
     public class DataAdd
     {
-        public static void FillDb(out int nItems, out int nSportShop, out int nDocs)
+        public static void FillDb(out int nItems, out int nClothShop, out int nDocs)
         {
-            var products = new List<SportItem>
+            var products = new List<Cloth>
              {
-                 new SportItem { Name = @"Протеін", Price = 10.50m,
-                 Description = @"Стань великим та сильним"},
-                 new SportItem { Name = @"Кадеін", Price = 10.20m,
-                 Description = @"Нехай твої мишци швидке відновляться"},
-                 new SportItem { Name = @"Л-Карнітин", Price = 9.80m,
-                 Description = @"Увесь час у тебе буде енергія"}
+                 new Cloth { Name = @"Куртка", Price = 12.40m,
+                 Description = @"Кожана та комфортна"},
+                 new Cloth { Name = @"Шорти", Price = 17.80m,
+                 Description = @"Можна плавати"},
+                 new Cloth { Name = @"Тапки", Price = 5.40m,
+                 Description = @"В'єтнамки"}
              };
 
-            using (var context = new SportShopContext())
+            using (var context = new ClothShopContext())
             {
-                products.ForEach(p => context.SportItems.Add(p));
+                products.ForEach(p => context.ClothItems.Add(p));
                 context.SaveChanges();
                 // Визначаємо кількість доданих рядків
-                nItems = context.SportItems.Count();
+                nItems = context.ClothItems.Count();
             }
-            var manufacturers = new List<SportShop>
+            var manufacturers = new List<ClothShop>
              {
-                 new SportShop { Name = @"Gym Beam",
-                 Address = @"вул. Гв. Широнінців, 1"},
-                 new SportShop { Name = @"Titan",
-                 Address = @"вул. Шкільна, 18"}
+                 new ClothShop { Name = @"Zara",
+                 Address = @"вул. Героїв Харкова 89"},
+                 new ClothShop { Name = @"Cotlin",
+                 Address = @"вул. Харківська 11"}
              };
-            using (var context = new SportShopContext())
+            using (var context = new ClothShopContext())
             {
-                manufacturers.ForEach(m => context.SportShops.Add(m));
+                manufacturers.ForEach(m => context.ClothShops.Add(m));
                 context.SaveChanges();
                 // Визначаємо кількість доданих рядків
-                nSportShop = context.SportShops.Count();
+                nClothShop = context.ClothShops.Count();
             }
-            var sales = new List<ItemDoc>
+            var sales = new List<ClothDoc>
              {
-                 new ItemDoc { Date = DateTime.Parse("01.09.2020"),
-                 SportShopId =1,
-                 SportItemId = 1,
-                 Count = 200 },
-                 new ItemDoc { Date = DateTime.Parse("01.09.2020"),
-                 SportShopId =1,
-                 SportItemId = 2,
-                 Count=250 },
-                 new ItemDoc { Date = DateTime.Parse("01.09.2020"),
-                 SportShopId =2,
-                 SportItemId = 1,
-                 Count=150 }
+                 new ClothDoc { Date = DateTime.Parse("02.08.2022"),
+                 ClothShopId =1,
+                 ClothId = 1,
+                 Count = 145 },
+                 new ClothDoc { Date = DateTime.Parse("02.08.2021"),
+                 ClothShopId =1,
+                 ClothId = 2,
+                 Count=345 },
+                 new ClothDoc { Date = DateTime.Parse("02.05.2023"),
+                 ClothShopId =2,
+                 ClothId = 1,
+                 Count=150 },
+                 new ClothDoc { Date = DateTime.Parse("02.05.2023"),
+                 ClothShopId =2,
+                 ClothId = 2,
+                 Count=123 }
+
              };
 
-            using (var context = new SportShopContext())
+            using (var context = new ClothShopContext())
             {
-                sales.ForEach(s => context.ItemDocs.Add(s));
+                sales.ForEach(s => context.ClothDocs.Add(s));
                 context.SaveChanges();
                 // Визначаємо кількість доданих рядків
-                nDocs = context.ItemDocs.Count();
+                nDocs = context.ClothDocs.Count();
             }
         }
     }

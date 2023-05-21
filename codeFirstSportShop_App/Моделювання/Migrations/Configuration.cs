@@ -8,66 +8,66 @@
     using Моделювання.DataAccess;
     using Моделювання.Model;
 
-    internal sealed class Configuration : DbMigrationsConfiguration<Моделювання.DataAccess.SportShopContext>
+    internal sealed class Configuration : DbMigrationsConfiguration<Моделювання.DataAccess.ClothShopContext>
     {
         public Configuration()
         {
             AutomaticMigrationsEnabled = false;
-            ContextKey = "Моделювання.DataAccess.SportShopContex";           
+            ContextKey = "Моделювання.DataAccess.ClothShopContext";           
         }
 
-        protected override void Seed(Моделювання.DataAccess.SportShopContext context)
+        protected override void Seed(Моделювання.DataAccess.ClothShopContext context)
         {
-            var products = new List<SportItem>
+            var products = new List<Cloth>
              {
-                 new SportItem { Name = @"Протеін", Price = 10.50m,
-                 Description = @"Стань великим та сильним"},
-                 new SportItem { Name = @"Кадеін", Price = 10.20m,
-                 Description = @"Нехай твої мишци швидке відновляться"},
-                 new SportItem { Name = @"Л-Карнітин", Price = 9.80m,
-                 Description = @"Увесь час у тебе буде енергія"}
+                 new Cloth { Name = @"Куртка", Price = 10.50m,
+                 Description = @"Кожана та комфортна"},
+                 new Cloth { Name = @"Шорти", Price = 10.20m,
+                 Description = @"Можна плавати"},
+                 new Cloth { Name = @"Тапки", Price = 9.80m,
+                 Description = @"В'єтнамки"}
              };
 
 
-            products.ForEach(p => context.SportItems.AddOrUpdate(t => t.Name, p));
+            products.ForEach(p => context.ClothItems.AddOrUpdate(t => t.Name, p));
             context.SaveChanges();
 
-            var manufacturers = new List<SportShop>
+            var manufacturers = new List<ClothShop>
              {
-                 new SportShop { Name = @"Gym Beam",
-                 Address = @"вул. Гв. Широнінців, 1"},
-                 new SportShop { Name = @"Titan",
-                 Address = @"вул. Шкільна, 18"}
+                 new ClothShop { Name = @"Zara",
+                 Address = @"вул. Героїв Харкова 89"},
+                 new ClothShop { Name = @"Cotlin",
+                 Address = @"вул. Харківська 11"}
              };
 
-            manufacturers.ForEach(m => context.SportShops.AddOrUpdate(t => t.Name, m));
+            manufacturers.ForEach(m => context.ClothShops.AddOrUpdate(t => t.Name, m));
             context.SaveChanges();
 
-            var sales = new List<ItemDoc>
+            var sales = new List<ClothDoc>
              {
-                 new ItemDoc { Date = DateTime.Parse("01.09.2020"),
-                 SportShopId =1,
-                 SportItemId = 1,
+                 new ClothDoc { Date = DateTime.Parse("02.08.2022"),
+                 ClothShopId =1,
+                 ClothId = 1,
                  Count = 200 },
-                 new ItemDoc { Date = DateTime.Parse("01.09.2020"),
-                 SportShopId =1,
-                 SportItemId = 2,
+                 new ClothDoc { Date = DateTime.Parse("02.08.2021"),
+                 ClothShopId =1,
+                 ClothId = 2,
                  Count=250 },
-                 new ItemDoc { Date = DateTime.Parse("01.09.2020"),
-                 SportShopId =2,
-                 SportItemId = 1,
+                 new ClothDoc { Date = DateTime.Parse("02.05.2023"),
+                 ClothShopId =2,
+                 ClothId = 1,
                  Count=150 }
              };
 
-            foreach (ItemDoc s in sales)
+            foreach (ClothDoc s in sales)
             {
-                var saleInDB = context.ItemDocs.Where(
-                p => p.SportItemId == s.SportItemId &&
-                p.SportShopId == s.SportShopId &&
+                var saleInDB = context.ClothDocs.Where(
+                p => p.ClothId == s.ClothId &&
+                p.ClothShopId == s.ClothShopId &&
                 p.Date == s.Date).SingleOrDefault();
                 if (saleInDB == null)
                 {
-                    context.ItemDocs.Add(s);
+                    context.ClothDocs.Add(s);
                 }
             }
 
@@ -77,89 +77,89 @@
             // Inovices *
             //***********
             // Нові сутності
-            var invoices = new List<Waybill>
+            var invoices = new List<Invoice>
              {
-                 new Waybill
+                 new Invoice
                  {
                     Number = "101",
-                    Date = DateTime.Parse("10.04.2023"),
-                    SportShopId = 1
+                    Date = DateTime.Parse("13.02.2023"),
+                    ClothShopId = 1
                  },
-                 new Waybill
+                 new Invoice
                  {
-                     Date = DateTime.Parse("11.04.2023"),
-                     SportShopId =2
+                     Date = DateTime.Parse("01.02.2021"),
+                     ClothShopId =2
                  }
              };
             // Перевіряємо рядки на дублювання накладних
-            foreach (Waybill i in invoices)
+            foreach (Invoice i in invoices)
             {
-                var invoiceInDB = context.Waybills.Where(
+                var invoiceInDB = context.Invoices.Where(
                 n => n.Date == i.Date &&
-                n.SportShopId == i.SportShopId
+                n.ClothShopId == i.ClothShopId
                 ).FirstOrDefault();
                 if (invoiceInDB == null)
                 {
-                    context.Waybills.Add(i);
+                    context.Invoices.Add(i);
                 }
             }
             context.SaveChanges();
 
-            int inoviceID = context.Waybills.Where(
-             n => n.Number == "101" && n.SportShopId == 1).SingleOrDefault().WaybillId;
+            int inoviceID = context.Invoices.Where(
+             n => n.Number == "101" && n.ClothShopId == 1).SingleOrDefault().InvoiceId;
             // Додаємотовари
-            var invoiceProducts = new List<WaybillItem>
+            var invoiceProducts = new List<InvoiceItem>
             {
                 // Товари накладних через їхні ID
-                 new WaybillItem
-                 { WaybillId =inoviceID,
-                 SportItemId=1, Count=200},
-                 new WaybillItem
-                 { WaybillId=inoviceID,
-                 SportItemId=2, Count=260},
+                 new InvoiceItem
+                 { InvoiceId =inoviceID,
+                 ClothId=1, Count=200},
+                 new InvoiceItem
+                 { InvoiceId=inoviceID,
+                 ClothId=2, Count=260},
             };
             // Перевіряємо рядки на дублювання товарів у накладній
-            foreach (WaybillItem ip in invoiceProducts)
+            foreach (InvoiceItem ip in invoiceProducts)
             {
-                var invoiceProductInDB = context.WaybillItems.Where(
-                 nt => nt.WaybillId == ip.WaybillId &&
-                 nt.SportItemId == ip.SportItemId).FirstOrDefault();
+                var invoiceProductInDB = context.InvoicesItems.Where(
+                 nt => nt.InvoiceId == ip.InvoiceId &&
+                 nt.ClothId == ip.ClothId).FirstOrDefault();
                 if (invoiceProductInDB == null)
                 {
-                    context.WaybillItems.Add(ip);
+                    context.InvoicesItems.Add(ip);
                 }
             }
             context.SaveChanges();
             // 2. Додавання товарів до нової накладної, отримані
             // від виробника з кодом 2.
-            /*invoices = new List<Waybill>
+            /*invoices = new List<Invoice>
             {
-                 new Waybill
+                 new Invoice
                  {
                      Number="102",
                      Date=DateTime.Parse("11.04.2022"),
-                     SportShopId=1,
-                     WaybillItems=new List<WaybillItem>
+                     ClothShopId=1,
+                     InvoicesItems=new List<InvoiceItem>
                      // Товари накладних через їхні назви (LINQ)
                      {
-                         new WaybillItem
+                         new InvoiceItem
                          {
-                             SportItemId=products.Single( p => p.Name ==
-                             @"Протеін").SportItemId,
+                             ClothId=products.Single( p => p.Name ==
+                             @"Протеін").ClothId,
                              Count=230
                          },
                      }
                  }
             };
             // Перевіряємо рядки на дублювання накладних
-            foreach (Waybill i in invoices)
+            foreach (Invoice i in invoices)
             {
-                var invoiceInDB = context.Waybills.Where(
-                n => n.Date == i.Date && n.SportShopId == i.SportShopId
+                var invoiceInDB = context.Invoices.Where(
+                n => n.Date == i.Date && n.ClothShopId == i.ClothShopId
                 ).FirstOrDefault();
                 if (invoiceInDB == null)
                 {
-                    context.Waybills.Add(i);
+                    context.Invoices.Add(i);
                 }
             }
             context.SaveChanges();*/

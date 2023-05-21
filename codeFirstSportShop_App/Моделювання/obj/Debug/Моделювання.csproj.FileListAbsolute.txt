@@ -56,12 +56,9 @@ C:\Users\Egor\Desktop\бд\codeFirstSportShop_App\Моделювання\bin\Deb
 C:\Users\Egor\Desktop\бд\codeFirstSportShop_App\Моделювання\bin\Debug\EntityFramework.SqlServer.xml
 C:\Users\Egor\Desktop\бд\codeFirstSportShop_App\Моделювання\obj\Debug\Моделювання.csproj.AssemblyReference.cache
 C:\Users\Egor\Desktop\бд\codeFirstSportShop_App\Моделювання\obj\Debug\Моделювання.csproj.SuggestedBindingRedirects.cache
-C:\Users\Egor\Desktop\бд\codeFirstSportShop_App\Моделювання\obj\Debug\Моделювання.Migrations.InitialCreate.resources
-C:\Users\Egor\Desktop\бд\codeFirstSportShop_App\Моделювання\obj\Debug\Моделювання.Migrations.AddWaybill.resources
-C:\Users\Egor\Desktop\бд\codeFirstSportShop_App\Моделювання\obj\Debug\Моделювання.Migrations.ChangeWaybillNumber.resources
-C:\Users\Egor\Desktop\бд\codeFirstSportShop_App\Моделювання\obj\Debug\Моделювання.Migrations.AddWaybillItem.resources
-C:\Users\Egor\Desktop\бд\codeFirstSportShop_App\Моделювання\obj\Debug\Моделювання.csproj.GenerateResource.cache
 C:\Users\Egor\Desktop\бд\codeFirstSportShop_App\Моделювання\obj\Debug\Моделювання.csproj.CoreCompileInputs.cache
 C:\Users\Egor\Desktop\бд\codeFirstSportShop_App\Моделювання\obj\Debug\Моделювання.csproj.CopyComplete
 C:\Users\Egor\Desktop\бд\codeFirstSportShop_App\Моделювання\obj\Debug\Моделювання.exe
 C:\Users\Egor\Desktop\бд\codeFirstSportShop_App\Моделювання\obj\Debug\Моделювання.pdb
+C:\Users\Egor\Desktop\бд\codeFirstSportShop_App\Моделювання\obj\Debug\Моделювання.Migrations.Creation.resources
+C:\Users\Egor\Desktop\бд\codeFirstSportShop_App\Моделювання\obj\Debug\Моделювання.csproj.GenerateResource.cache

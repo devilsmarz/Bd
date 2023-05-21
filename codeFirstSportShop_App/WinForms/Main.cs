@@ -19,14 +19,14 @@ namespace WinForms
 
         private void SportItemsButton_Click(object sender, EventArgs e)
         {
-            SportItemsForm вікноТовари = new SportItemsForm();
+            ClothItemsForm вікноТовари = new ClothItemsForm();
             вікноТовари.ShowDialog();
         }
 
-        private void SportShopsButton_Click(object sender, EventArgs e)
+        private void ClothShopsButton_Click(object sender, EventArgs e)
         {
-            SportShopsForm sportShopsForm = new SportShopsForm();
-            sportShopsForm.ShowDialog();
+            ClothShopsForm ClothShopsForm = new ClothShopsForm();
+            ClothShopsForm.ShowDialog();
         }
 
         private void SalesButton_Click(object sender, EventArgs e)
@@ -37,14 +37,14 @@ namespace WinForms
 
         private void DocButton_Click(object sender, EventArgs e)
         {
-            WaybillsForm waybillsForm = new WaybillsForm();
-            waybillsForm.ShowDialog();
+            InvoicesForm InvoicesForm = new InvoicesForm();
+            InvoicesForm.ShowDialog();
         }
 
-        private void SalesBySportShopsButton_Click(object sender, EventArgs e)
+        private void SalesByClothShopsButton_Click(object sender, EventArgs e)
         {
-            SportShopSalesForm sportShopSalesForm = new SportShopSalesForm();
-            sportShopSalesForm.ShowDialog();
+            ClothShopSalesForm ClothShopSalesForm = new ClothShopSalesForm();
+            ClothShopSalesForm.ShowDialog();
         }
     }
 }

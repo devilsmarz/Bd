@@ -14,7 +14,7 @@ namespace WinForms
 {
     public partial class SalesForm : Form
     {
-        private SportShopContext context;
+        private ClothShopContext context;
         public SalesForm()
         {
             InitializeComponent();
@@ -28,22 +28,27 @@ namespace WinForms
         private void SalesForm_Load(object sender, EventArgs e)
         {
             // Створюємо екземпляр класу DbContext
-            context = new SportShopContext();
+            context = new ClothShopContext();
             // Завантажуємо дані для productBindingSource
             // та manufacturerBindingSource
-            sportItemBindingSource.DataSource = context.SportItems.ToList();
-            sportShopBindingSource.DataSource =
-            context.SportShops.ToList();
+            sportItemBindingSource.DataSource = context.ClothItems.ToList();
+            ClothShopBindingSource.DataSource =
+            context.ClothShops.ToList();
             // Завантажуємо дані для saleBindingSource
-            context.ItemDocs.Load();
+            context.ClothDocs.Load();
             itemDocBindingSource.DataSource =
-            context.ItemDocs.Local.ToBindingList();
+            context.ClothDocs.Local.ToBindingList();
         }
 
         private void itemDocBindingNavigatorSaveItem_Click(object sender, EventArgs e)
         {
             itemDocBindingSource.EndEdit();
             context.SaveChanges();
+        }
+
+        private void sportItemIdLabel_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

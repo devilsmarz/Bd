@@ -53,31 +53,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DataAccess\SportShopContext.cs" />
+    <Compile Include="DataAccess\ClothShopContext.cs" />
     <Compile Include="Fill\DataAdd.cs" />
-    <Compile Include="Migrations\202304081830500_InitialCreate.cs" />
-    <Compile Include="Migrations\202304081830500_InitialCreate.designer.cs">
-      <DependentUpon>202304081830500_InitialCreate.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202304091344555_AddWaybill.cs" />
-    <Compile Include="Migrations\202304091344555_AddWaybill.designer.cs">
-      <DependentUpon>202304091344555_AddWaybill.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202304091347499_ChangeWaybillNumber.cs" />
-    <Compile Include="Migrations\202304091347499_ChangeWaybillNumber.designer.cs">
-      <DependentUpon>202304091347499_ChangeWaybillNumber.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202304091406273_AddWaybillItem.cs" />
-    <Compile Include="Migrations\202304091406273_AddWaybillItem.designer.cs">
-      <DependentUpon>202304091406273_AddWaybillItem.cs</DependentUpon>
+    <Compile Include="Migrations\202305210016570_Creation.cs" />
+    <Compile Include="Migrations\202305210016570_Creation.designer.cs">
+      <DependentUpon>202305210016570_Creation.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
-    <Compile Include="Model\ItemDoc.cs" />
+    <Compile Include="Model\ClothDoc.cs" />
     <Compile Include="Model\ObservableListSource.cs" />
-    <Compile Include="Model\SportItem.cs" />
-    <Compile Include="Model\SportShop.cs" />
-    <Compile Include="Model\Waybill.cs" />
-    <Compile Include="Model\WaybillItem.cs" />
+    <Compile Include="Model\Cloth.cs" />
+    <Compile Include="Model\ClothShop.cs" />
+    <Compile Include="Model\Invoice.cs" />
+    <Compile Include="Model\InvoiceItem.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -86,17 +74,8 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\202304081830500_InitialCreate.resx">
-      <DependentUpon>202304081830500_InitialCreate.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202304091344555_AddWaybill.resx">
-      <DependentUpon>202304091344555_AddWaybill.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202304091347499_ChangeWaybillNumber.resx">
-      <DependentUpon>202304091347499_ChangeWaybillNumber.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202304091406273_AddWaybillItem.resx">
-      <DependentUpon>202304091406273_AddWaybillItem.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202305210016570_Creation.resx">
+      <DependentUpon>202305210016570_Creation.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

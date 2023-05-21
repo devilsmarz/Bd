@@ -39,10 +39,10 @@ C:\Users\Egor\Desktop\бд\codeFirstSportShop_App\WinForms\bin\Debug\EntityFrame
 C:\Users\Egor\Desktop\бд\codeFirstSportShop_App\WinForms\obj\Debug\WinForms.Main.resources
 C:\Users\Egor\Desktop\бд\codeFirstSportShop_App\WinForms\obj\Debug\WinForms.Properties.Resources.resources
 C:\Users\Egor\Desktop\бд\codeFirstSportShop_App\WinForms\obj\Debug\WinForms.SalesForm.resources
-C:\Users\Egor\Desktop\бд\codeFirstSportShop_App\WinForms\obj\Debug\WinForms.SportItemsForm.resources
-C:\Users\Egor\Desktop\бд\codeFirstSportShop_App\WinForms\obj\Debug\WinForms.SportShopSalesForm.resources
-C:\Users\Egor\Desktop\бд\codeFirstSportShop_App\WinForms\obj\Debug\WinForms.SportShopsForm.resources
-C:\Users\Egor\Desktop\бд\codeFirstSportShop_App\WinForms\obj\Debug\WinForms.WaybillsForm.resources
 C:\Users\Egor\Desktop\бд\codeFirstSportShop_App\WinForms\obj\Debug\WinForms.csproj.GenerateResource.cache
 C:\Users\Egor\Desktop\бд\codeFirstSportShop_App\WinForms\obj\Debug\WinForms.csproj.CoreCompileInputs.cache
 C:\Users\Egor\Desktop\бд\codeFirstSportShop_App\WinForms\obj\Debug\WinForms.csproj.CopyComplete
+C:\Users\Egor\Desktop\бд\codeFirstSportShop_App\WinForms\obj\Debug\WinForms.ClothShopSalesForm.resources
+C:\Users\Egor\Desktop\бд\codeFirstSportShop_App\WinForms\obj\Debug\WinForms.ClothShopsForm.resources
+C:\Users\Egor\Desktop\бд\codeFirstSportShop_App\WinForms\obj\Debug\WinForms.InvoicesForm.resources
+C:\Users\Egor\Desktop\бд\codeFirstSportShop_App\WinForms\obj\Debug\WinForms.ClothItemsForm.resources

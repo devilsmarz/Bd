@@ -1,6 +1,6 @@
 ﻿namespace WinForms
 {
-    partial class SportShopsForm
+    partial class ClothShopsForm
     {
         /// <summary>
         /// Required designer variable.
@@ -51,16 +51,16 @@
             this.SabeChangesButton.UseVisualStyleBackColor = true;
             this.SabeChangesButton.Click += new System.EventHandler(this.SabeChangesButton_Click);
             // 
-            // SportShopsForm
+            // ClothShopsForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.SabeChangesButton);
             this.Controls.Add(this.dataGridView1);
-            this.Name = "SportShopsForm";
-            this.Text = "SportShopsForm";
-            this.Load += new System.EventHandler(this.SportShopsForm_Load);
+            this.Name = "ClothShopsForm";
+            this.Text = "ClothShopsForm";
+            this.Load += new System.EventHandler(this.ClothShopsForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 
